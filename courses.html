@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillRazor</title>
+    <link rel="Stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
+    <style>
+
+        .body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .greetings{
+            position: relative;
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         
+        .greetings .hi{
+            font-size: 2.3em;
+            font-weight: 530;
+        } 
+        
+       /** .Panelbar{
+            position:absolute;
+            width: 320px;
+            background-color: rgb(245, 247, 248);
+            height: 1800px;
+            padding: 0 10px;
+            font-size: 1.2em;
+            padding-left: 30px;
+            padding-top: 40px;
+        }
+**/
+        .courses-body{
+            position: relative;
+            width:95.2vw;
+            height: 1800px;
+            padding: 0 30px;
+            color: rgb(55, 58, 60);
+        }
+
+        .check-credit{
+            margin:10px ;
+            margin-left: 0px;
+        }
+
+        .check-cert{
+            margin:10px ;
+            margin-left: 0px;
+        }
+
+        .input2{
+            width: 30px;
+            height: 20px;
+        }
+        .subject,.Skill, .filter,.Level h3{
+            margin: 20px;
+            margin-left: 0px;
+        }
+
+        .subject-content,.skill-content, .lev-content{
+            white-space: nowrap;
+        }
+
+        .sub-check,.skill-check , .lev-check{
+            margin: 10px 3px 7px 0px;
+        }
+
+        .more{
+            color: rgb(31, 31, 31);
+        }
+
+        .more-link{
+            margin: 10px;
+        }
+        .more:hover{
+            color: #0056d2;
+        }
+
+        
+        
+
+        .flex-head{
+            background-color: rgb(245, 247, 248);
+            position: relative;
+            left: 300px;
+            top:70px;
+            width: 800px;
+            height: 30px;
+        }
+
+        .flex-head h4{
+            font-size: large;
+        }
+
+        .courses-flex{
+            position: relative;
+            width: 1005px;
+            left: 300px;
+           height: 1800px;
+           
+    
+        }
+
+        .Python-course{
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.855);
+            width: 310px;
+            height: 410px;
+            left: 80px;
+            top: 110px;
+            border-radius: 14px;
+            transition: 0.5s;
+            border: 1px solid rgba(31, 31, 31, 0.326);
+        }
+
+        .Excel-course{
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.855);
+            width: 310px;
+            height: 410px;
+            left: 410px;
+            top: 140px;
+            border-radius: 14px;
+            transition: 0.5s;
+            border: 1px solid rgba(31, 31, 31, 0.326);
+        }
+
+        .Front-course{
+            position: absolute;
+            width: 310px;
+            height: 410px;
+            background-color: white;
+            top: 140px;
+            left: 740px;
+            border-radius: 14px;
+            transition: 0.5s;
+            border: 1px solid rgba(31, 31, 31, 0.326);
+            
+
+
+        }
+
+        .Ai-course{
+            position: relative;
+            width: 310px;
+            height: 400px;
+            top: 140px;
+            background-color: rgba(255, 255, 255, 0.855) ;
+            left: 80px;
+            border:1px solid rgba(31, 31, 31, 0.326);
+            border-radius: 14px; 
+            transition: 0.5s;
+           }
+
+           .Cyber-course{
+            position: relative;
+            width:311px;
+            height: 400px;
+            top: 531px;
+            left: 754px;
+            background-color: rgba(255, 255, 255, 0.855) ;
+            border-radius: 14px;
+            transition: 0.5s;
+            border:1px solid rgba(31, 31, 31, 0.326);
+           }
+
+           .En-lang{
+            position: relative;
+            width: 290px;
+            height: 400px;
+            background-color: #0056d2;
+        }
+
+           
+        .Python-course:hover{
+            padding: 10px 10px 10px 10px;
+            left: 70px;
+            top: 105px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .Excel-course:hover{
+            padding: 10px;
+            left: 400px;
+            top: 135px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .Front-course:hover{
+            padding: 10px 10px 10px 10px;
+            left: 735px;
+            top: 135px;
+        }
+
+        .Ai-course:hover{
+            padding:9px;
+            left: 386px;
+            top: 458px;
+           }
+
+        .Cyber-course:hover{
+            padding: 10px;
+            top: 527px;
+            left: 745px;
+        }
+
+           
+
+        .excel-card,.python-card{
+            position: relative;
+            left: 10px;
+            top: 10px;
+            bottom: 10px;
+            right: 10px;
+            width: 290px;
+            height: 430px;
+            background-color: rgba(255, 255, 255, 0.359);
+            transition: 0.5s;
+            border-radius: 10px;
+            overflow: hidden; 
+        }
+
+        .Front-card{
+            position: relative;
+            left: 10px;
+            top: 10px;
+            bottom: 10px;
+            right: 10px;
+            width: 290px;
+            height: 380px;  
+            background-color: aqua; 
+            transition: 0.5s;
+            background-color: rgba(255, 255, 255, 0.359);
+            border-radius: 10px;
+        }
+
+        .Ai-card{
+            position: relative;
+            left: 10px;
+            right: 10px;
+            top: 10px;
+            width: 290px;
+            height: 380px;
+            transition: 0.5s;
+            background-color: rgba(255, 255, 255, 0.359);
+            border-radius: 10px;
+        }
+
+        .Cyber-card{
+            position: relative;
+            left: 10px;
+            right: 10px;
+            top: 10px;
+            width: 290px;
+            height: 380px;
+            transition: 0.5s;
+            background-color: rgba(255, 255, 255, 0.359);
+            border-radius: 10px;
+        }
+       
+
+        .Ai-card:hover{
+            left: 0;
+            top: 0;
+            width: 310px;
+            height: 400px;
+        }
+
+
+        .Front-card:hover{
+            left: 0px;
+            top: 0px;
+            width: 310px;
+            height: 400px;
+        }
+
+        .excel-card:hover{
+            
+            left: 0;
+            width: 310px;
+            height: 420px;         
+            top: 0;
+        }
+
+        .python-card:hover{
+            
+            left: 0;
+            width: 310px;
+            height: 420px;         
+            top: 0;
+        }
+
+        .Cyber-card:hover{
+            left: 0;
+            width: 310px;
+            height: 400px;
+            top: 0;
+        }
+
+        .pycard-info {
+            height: 185px;
+            background-image: url(/Python-img.png);
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        .excard-info{
+            height: 185px;
+            background-image: url(/excel-logo.png);
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        .fr-info{
+            height: 185px;
+            background-image: url(/JCH.png);
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        .Ai-info{
+            height: 185px;
+            background-image: url(/Ai.png);
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        .Cyber-info{
+            height: 185px;
+            background-image: url(/Cyber.png);
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        .company{
+            position: relative;
+            top: 195px;
+            left: 5px;
+            width: 280px;
+            height: 36px;
+            background-color: white;
+            
+        }
+
+        .com-logo{
+            position: relative;
+            top: 4px;
+            left: 5px;
+            width: 30px;
+            
+            height: 28px;
+            background-image: url(/IBM-Logo-Blk---Square.png);
+            background-size: cover;
+            background-position: center;
+            background-color: #fff;
+            border-radius: 2px;
+            border: 1px solid rgba(31, 31, 31, 0.326);
+
+            
+        }
+
+        .com-text{
+            position: relative;
+            left: 35px;
+            top: 6px;
+            color: rgb(31, 31, 31);
+            font-size: 14px;
+        }
+
+        .card-details{
+            position: relative;
+            top: 200px;
+            left: 10px;
+            height: 100px;
+            font-size: 15px;
+            }
+
+        .card-hing h4{
+            position: relative;
+            margin-top: 13px;
+            font-size: 16px;
+            left: 3px;
+            color: rgba(0, 0, 0, 0.871);
+        }
+
+        .skill-info{
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .rev{
+            position: relative;
+            margin-top: 7px;
+            
+        }
+
+        .level-info{
+            position: relative;
+            margin-top: 15px;   
+        }
+
+        h1,h2,h3,h4,h5,h6{
+           color:rgba(0, 0, 0, 0.871) ; 
+        }
+        
+        b {
+            color: rgba(0, 0, 0, 0.873);
+        }
+
+
+        .flex-content{
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-hing h2 {
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+        
+        .card-hing .box {
+            width: 70px;
+        }
+
+        .excel-card .level-info b{
+           position: absolute;
+           top: 10px;
+           left: 88px;
+        }
+
+        
+
+        .down-btn {
+            width: 280px;
+            height: 38px;
+            background-color: rgb(40, 190, 126);
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding-left: 5px;
+        } 
+
+        .down-btn .Dbtn {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: -41px;
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+        
+
+        .Excel-course .level-info{
+            position: relative;
+            margin-top: 5px;
+        }
+        
+        .level-info {
+            text-align: center;
+        }
+
+        #py2 {
+            margin-top: 15px;
+        }
+        
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li style="padding: 0;" onclick=hideSidebar()><a class="element" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li style="padding: 0;"><a id="Mycourses"class="element" href="#">Home</a></li>
+            <li style="padding: 0;"><a class="element" href="#">Browse</a></li>
+            <li style="padding: 0;"><a class="element" href="/Profile.html">Profile</a></li>
+            <li style="padding: 0;"><a class="element" href="/Cart.html">Cart</a></li>
+            
+        </ul>
+        
+        <ul>
+            <li><a class="element" id="Skill" href="#">FinalMacro</a></li>
+            <li class="browse-button" id="hideonMobile">
+                <a class="btn" href="#">Browse</a>
+              <!--  <div class="dropdown" id="myDropdown">
+                    <a class="heading" href="#">Goals</a>
+                    <a href="/courses.html">All Course </a>
+                    <a href="#">Take a Certificate</a>
+                    <a href="#">Earn a Degree</a>
+                    <a id="heading2" class="heading" href="#">Subjects</a>
+                    <a href="#">Data Science</a>
+                    <a href="#">Bussiness</a>
+                    <a href="#">Computer Science</a>
+                    <a href="/Vb.html">Microsoft Visual Basic</a>
+                    <a href="#">Information Technology</a>
+                    <a href="#">Language</a>
+                    <a href="#">Personal Development</a>
+                    <a href="#">Engineering</a>
+                    <a href="#">Arts Skills</a>
+                    <h2><a href="/more.html" style="color: black;">More....</a></h2>
+                </div>
+                -->
+            </li>
+            <form id="hideonMobile">
+                <div class="search-box" >
+                    <input class="iner" type="text" placeholder="Search">
+                    <button type="submit" class="search-icon" id="searchButton">
+                        <!-- You can replace the SVG code with your own search icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 24 24" width="26">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path fill="white" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </button>
+                    
+                </div>
+            </form>
+            <li class="language-dropdown" id="hideonMobile" >
+                <a class="element" href="#" onmouseover="showDropdown('languageDropdown')" onmouseout="hideDropdown('languageDropdown')"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>Language</a>
+                <div class="language-dropdown-content" id="languageDropdown" onmouseover="showDropdown('languageDropdown')" onmouseout="hideDropdown('languageDropdown')">
+                    <a href="#"><span class="flag-icon flag-icon-ar"></span>Arabic</a>
+                            <a href="#"><span class="flag-icon flag-icon-bd"></span>Bengali</a>
+                            <a href="#"><span class="flag-icon flag-icon-cn"></span>Chinese</a> 
+                            <a href="#"><span class="flag-icon flag-icon-cz"></span>Czech</a>
+                            <a href="#"><span class="flag-icon flag-icon-dk"></span> <!-- Danish -->Danish</a>
+                            <a href="#"><span class="flag-icon flag-icon-nl"></span> <!-- Dutch -->Dutch</a>
+                            <a href="#"><span class="flag-icon flag-icon-gb"></span> <!-- English -->English</a>
+                            <a href="#"><span class="flag-icon flag-icon-fi"></span> <!-- Finnish --> Finnish</a>
+                            <a href="#"><span class="flag-icon flag-icon-fr"></span> <!-- French --> French</a>
+                            <a href="#"><span class="flag-icon flag-icon-de"></span>  German</a>
+                            <a href="#"><span class="flag-icon flag-icon-gr"></span> Greek</a>
+                            <a href="#"><span class="flag-icon flag-icon-in"></span>Hindi</a>
+                            <a href="#"><span class="flag-icon flag-icon-hu"></span> Hungarian</a>
+                            <a href="#"><span class="flag-icon flag-icon-it"></span> Italian</a>
+                            <a href="#"><span class="flag-icon flag-icon-jp"></span> Japanese</a>
+                            <a href="#"><span class="flag-icon flag-icon-kr"></span> Korean</a>
+                            <a href="#"><span class="flag-icon flag-icon-my"></span> Malay</a>
+                            <a href="#"><span class="flag-icon flag-icon-no"></span>Norwegian</a>
+                            <a href="#"><span class="flag-icon flag-icon-ir"></span>Persian</a>
+                            <a href="#"><span class="flag-icon flag-icon-pl"></span> Polish</a>
+                            <a href="#"><span class="flag-icon flag-icon-pt"></span>Portuguese</a>
+                            <a href="#"><span class="flag-icon flag-icon-ro"></span>Romanian</a>
+                            <a href="#"><span class="flag-icon flag-icon-ru"></span>Russian</a>
+                            <a href="#"><span class="flag-icon flag-icon-es"></span>Spanish</a>
+                            <a href="#"> <span class="flag-icon flag-icon-ke"></span> Swahili</a>
+                            <a href="#"><span class="flag-icon flag-icon-se"></span> Swedish</a>
+                            <a href="#"><span class="flag-icon flag-icon-th"></span> Thai</a>
+                            <a href="#"><span class="flag-icon flag-icon-tr"></span> Turkish</a>
+                            <a href="#"><span class="flag-icon flag-icon-pk"></span>Urdu</a>
+                            <a href="#"><span class="flag-icon flag-icon-vn"></span>Vietnamese</a>
+                    <!-- Add more language options as needed -->
+                </div>
+            </li>
+            <li id="hideonMobile"><a id="Mycourses"class="element" href="/MiCourses.html"><svg class="course" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z"/></svg>My Courses</a></li>
+            <li id="hideonMobile"><a class="element" href="/Profile.html"><svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="20"><path d="M480-492.309q-57.749 0-98.874-41.124-41.125-41.125-41.125-98.874 0-57.75 41.125-98.874 41.125-41.125 98.874-41.125 57.749 0 98.874 41.125 41.125 41.124 41.125 98.874 0 57.749-41.125 98.874-41.125 41.124-98.874 41.124ZM180.001-187.694v-88.922q0-29.384 15.962-54.422 15.961-25.038 42.653-38.5 59.308-29.077 119.654-43.615T480-427.691q61.384 0 121.73 14.538 60.346 14.538 119.654 43.615 26.692 13.462 42.653 38.5 15.962 25.038 15.962 54.422v88.922H180.001ZM240-247.693h480v-28.923q0-12.154-7.039-22.5-7.038-10.346-19.115-16.885-51.692-25.461-105.418-38.577Q534.702-367.693 480-367.693t-108.428 13.115q-53.726 13.116-105.418 38.577-12.077 6.539-19.115 16.885Q240-288.77 240-276.616v28.923Zm240-304.614q33 0 56.5-23.5t23.5-56.5q0-33-23.5-56.5t-56.5-23.5q-33 0-56.5 23.5t-23.5 56.5q0 33 23.5 56.5t56.5 23.5Zm0-80Zm0 384.614Z"/></svg>Profile</a></li>
+            <li id="hideonMobile"><a class="element" href="/Cart.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M286.154-97.694q-29.153 0-49.576-20.422-20.423-20.423-20.423-49.577 0-29.153 20.423-49.576 20.423-20.423 49.576-20.423 29.154 0 49.577 20.423t20.423 49.576q0 29.154-20.423 49.577-20.423 20.422-49.577 20.422Zm387.692 0q-29.154 0-49.577-20.422-20.423-20.423-20.423-49.577 0-29.153 20.423-49.576 20.423-20.423 49.577-20.423 29.153 0 49.576 20.423 20.423 20.423 20.423 49.576 0 29.154-20.423 49.577-20.423 20.422-49.576 20.422ZM240.615-730 342-517.692h272.692q3.462 0 6.154-1.731 2.693-1.731 4.616-4.808l107.307-195q2.308-4.231.385-7.5-1.923-3.27-6.539-3.27h-486Zm-28.769-59.998h555.383q24.538 0 37.115 20.884 12.577 20.885 1.192 42.654L677.384-494.309q-9.847 17.308-26.039 26.962-16.192 9.653-35.499 9.653H324l-46.308 84.616q-3.077 4.616-.192 10.001t8.654 5.385h457.691v59.998H286.154q-39.999 0-60.115-34.499-20.115-34.5-1.423-68.884l57.078-102.616-145.539-306.308H60.001v-59.998h113.845l38 80ZM342-517.692h280-280Z"/></svg>Cart</a></li>
+            <li onclick=showSidebar()><a href="#"><svg  class="ex" xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+        </ul>
+    </nav>
+    </hr>
+   
+    <div class="courses-body">
+        <div class="greetings">
+            <p class="hi">Browse From Over All 3,000 Courses</p>
+        </div>
+        <div class="Panelbar">
+        <!-- <div class="filter">
+                <h3>Filter By</h3>
+        </div>
+        <div class="check-credit">
+                <input class="input2" type="checkbox" required="checkbox">
+                <label>Credit Eligible</label>
+        </div>
+        <div class="check-cert">
+               <input class="input2" type="checkbox" required="checkbox">
+            <label>Certificate</label>    
+        </div>
+        <div class="subject">
+            <h3>Subject</h3>
+                <div class="subject-content">
+                    <div class="sub-check">
+                       <input class="input2" type="checkbox" required="checkbox">
+                       <label>Computer Science</label>  
+                    </div>
+                    <div class="sub-check">
+                        <input class="input2" type="checkbox" required="checkbox">
+                        <label>Bussiness</label>
+                    </div>
+                    <div class="sub-check">
+                        <input class="input2" type="checkbox" required="checkbox">
+                        <label>Information Technology</label>
+                    </div>
+                    <div class="sub-check">
+                       <input class="input2" type="checkbox" required="checkbox">
+                       <label>Data Science</label>
+                    </div>
+                    <div class="more-link">
+                        <a class="more" href="#">Show more</a>....
+                      </div>
+                    </div>
+
+                    </div>
+                    <div class="Skill">
+                        <h3>Skills</h3>
+                    <div class="skill-content">
+                        <div class="skill-check">
+                                 <input class="input2" type="checkbox" required="checkbox">
+                                 <label>Account Management</label>
+                        </div>
+                        <div class="skill-check">
+                                 <input class="input2" type="checkbox" required="checkbox">
+                                 <label>Communication</label>
+                          </div>
+                          <div class="sub-check">
+                            <input class="input2" type="checkbox" required="checkbox">
+                            <label>Software Developer</label>
+                      </div>
+                      <div class="sub-check">
+                            <input class="input2" type="checkbox" required="checkbox">
+                            <label>Web Developer</label>
+                     </div>
+                     <div class="more-link">
+                       <a class="more" href="#">Show more</a>....
+                       </div>
+                         </div>
+                    </div>
+                    
+                       <div class="Level">
+                        <h3>Level</h3>
+                    <div class="lev-content">
+                    <div class="lev-check">
+                                 <input class="input2" type="checkbox" required="checkbox">
+                                 <label>Beginner</label>
+                  </div>
+                  <div class="lev-check">
+                                 <input class="input2" type="checkbox" required="checkbox">
+                                 <label>Intermediate</label>
+                  </div>
+                  <div class="lev-check">
+                                 <input class="input2" type="checkbox" required="checkbox">
+                                 <label>Advanced</label>
+                   </div>
+                    </div>
+                    
+        </div> <!-->
+    </div>
+    <div class="courses-flex">
+        <div class="flex-head">
+            <h4>Choose the courses According to Your Goals</h4>
+        </div> 
+        <div class="Python-course">
+            <div class="python-card">
+                <div class="pycard-info">
+                    <div class="company">
+                        <div class="com-logo">
+                            <div class="com-text"><p>IBM</p></div>
+                    </div>
+                    <div class="card-hing">
+                            <h2>Basic Macro Plan</h2>
+                          </div>
+                        <div class="skill-info">
+                            <b>Data Offers:</b><p>Description,Brand,Price,<br/>Seller. 
+                            </p>
+                          </div>
+                          
+                          <div class="down-btn">
+                            <a href="#" class="Dbtn">Download</a>
+                          </div>
+                          <div class="level-info">
+                            <b>Beginner</b>
+                          </div>
+                </div>
+            </div>
+        </div>
+    </div><!--End-->
+
+    <div class="Excel-course">
+        <div class="excel-card">
+            <div class="excard-info">
+                <div class="company">
+                    <div class="com-logo">
+                        <div class="com-text"><p>IBM</p></div>
+                  </div>
+                  <div class="card-hing">
+                    <h2>Intermediate Macro Plan 
+                    </h2>
+                  </div>
+                  <div class="skill-info">
+                    <b>Data Offers:</b><p>Description,Brand,Price,<br/>Ratings,Reviews,Seller.</p>
+                  </div>
+                  
+                  <div class="down-btn">
+                    <a href="#" class="Dbtn">Download</a>
+                  </div>
+                  <div class="level-info">
+                    <b>Intermediate</b>
+                  </div>
+            </div>
+           </div>
+        </div>
+    </div><!--End-->
+    
+
+    <div class="Front-course">
+        <div class="Front-card">
+            <div class="fr-info">
+                <div class="company">
+                    <div class="com-logo">
+                        <div class="com-text"><p>IBM</p></div>
+                </div>
+                <div class="card-hing">
+                        <h2>Final.Macro</h2>
+                      </div>
+                    <div class="skill-info">
+                        <b id="box">Data Offers:</b><p>Description,Brand,Price,<br/>Ratings,Reviews,etc.</p>
+                      </div>
+                      
+                      <div class="down-btn">
+                        <a href="#" class="Dbtn">Download</a>
+                      </div>
+                      <div class="level-info">
+                        <b>Beginner</b>
+                      </div>
+            </div>
+        </div>
+    </div>
+    </div><!--End-->
+
+    <div id="py2" class="Python-course">
+        <div class="python-card">
+            <div class="pycard-info">
+                <div class="company">
+                    <div class="com-logo">
+                        <div class="com-text"><p>IBM</p></div>
+                </div>
+                <div class="card-hing">
+                        <h2>Basic Macro Plan</h2>
+                      </div>
+                    <div class="skill-info">
+                        <b>Data Offers:</b><p>Description,Brand,Price,<br/>Seller. 
+                        </p>
+                      </div>
+                      
+                      <div class="down-btn">
+                        <a href="#" class="Dbtn">Download</a>
+                      </div>
+                      <div class="level-info">
+                        <b>Beginner</b>
+                      </div>
+                      </div>
+    </div>
+    
+    
+
+    
+                                            
+
+
+</div><!--Courses fLex-->
+</div>
+
+</div><!--Courses body-->
+
+
+           
+        
+
+    
+</body>
+
+    <script>
+         function showDropdown(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function hideDropdown(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        function showDropdown(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function hideDropdown(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
+
